@@ -30,6 +30,11 @@ app.get('/ping', (req, res) => {
     return res.send('pong');
 });
 
+app.get('/', (req, res) => {
+    console.log('works');
+    return res.send('Works')
+});
+
 websocket.on('connection', (socket) => {
 
     socket.on('joined', (userId) => console.log(userId, ' Joined'));
